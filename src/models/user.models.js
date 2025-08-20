@@ -40,6 +40,7 @@ next()
 userTable.methods.comparePassword=async function(password){
   return await bcrypt.compare(password,this.password)
 }
+
 userTable.methods.generateAccessToken=function(){
 return jwt.sign(
   {
